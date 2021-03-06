@@ -1,0 +1,226 @@
+:root{
+    --primary-color: rgb(10, 10, 10); 
+    --secondary-color: white;
+    --overlay-color: rgba(0,0,0,0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Catamaran', sans-serif;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    min-width: 100%;
+    background-color: rgb(248, 248, 248);
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.3;
+}
+
+a{
+    color: var(--secondary-color);
+    text-decoration: none; 
+}
+
+ul {
+    list-style: none;
+}
+
+.img {
+    background-image: url(../images/pic.jpg);
+    height: 42rem;
+    width: 100%;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    overflow: auto;
+    object-fit: cover;
+} 
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background-color:var(--primary-color);
+}
+
+.navbar .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+}
+
+.navbar .logo{
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.navbar .nav{
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .nav a {
+    padding: 0 1rem;   
+}
+
+.navbar .nav a:hover {
+    color: rgb(221, 209, 209);  
+}
+
+/* Section hello */
+.section-hello {
+    margin: auto;
+    width: 100%;
+}
+
+.section-hello .container{
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: left;  
+    margin-top: 3.5rem;
+}
+
+.section-hello h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.section-hello h3 {
+    padding-top: 1.3rem;
+}
+
+.section-hello p{
+    margin: 1rem 0;
+}
+
+/* section hello buttons */
+.button {
+    border: 1px;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 15%;
+}
+
+.btn{
+    background-color: white;
+    color: black;
+}
+
+.btnfill{
+    background-color: black;
+    color: white;
+}
+
+.btn:hover {
+    background:black;
+    color: white;
+    border: 1px solid black;
+}
+
+.btnfill:hover {
+    background:white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+/* Section experience */
+.section-experience {
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+.section-footer {
+    background-color:rgb(62, 63, 65);
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    position: static;
+    height: auto;
+    margin:auto;
+}
+
+.section-footer .container {
+    text-align: center;
+}
+
+.section-footer .container .icons {
+    font-size: 2rem;
+}
+
+i {
+    padding: 1rem;
+}
+
+/* media query to add a breakpoint at 700px */
+@media (max-width: 700px) {
+    .section-hello .container{
+        grid-template-columns: 1fr;
+        grid-gap: 1.8rem;
+        text-align: center;
+    }
+    .img {
+        width: 70%;
+        margin: auto;
+    }
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+}
+
+
+
